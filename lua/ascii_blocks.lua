@@ -1,4 +1,3 @@
--- git clone --depth 1 https://github.com/Stepets/utf8.lua ~/.config/nvim/lua/utf8
 local utf8 = require('.utf8'):init()
 
 local h_wall = '─'
