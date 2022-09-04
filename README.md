@@ -17,6 +17,44 @@ Plug 'superhawk610/ascii-blocks.nvim'
 This plugin provides the `:AsciiBlockify` command. It will scan the current
 buffer for any ASCII boxes and convert them to their UTF-8 equivalents.
 
+For example, given this input:
+
+```plain
+  +---------+    +---+
+  |         |    |   | <- smallest
+  |  some   |    +---+
+  |   text  |
+  |         | <- standard
+  +---------+
+
+        +--------------+
+        |              |
+  +-----+----+         |
+  |     |    |         |
+  |     +----+---------+
+  |          | <- overlapping
+  +----------+
+```
+
+generate this output:
+
+```plain
+  ┌─────────┐    ┌───┐
+  │         │    │   │ <- smallest
+  │  some   │    └───┘
+  │   text  │
+  │         │ <- standard
+  └─────────┘
+
+        ┌──────────────┐
+        │              │
+  ┌─────┼────┐         │
+  │     │    │         │
+  │     └────┼─────────┘
+  │          │ <- overlapping
+  └──────────┘
+```
+
 ## Copyright
 
 &copy; 2022 Aaron Ross, All Rights Reserved.
