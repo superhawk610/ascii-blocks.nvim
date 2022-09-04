@@ -2,43 +2,7 @@
 
 Quickly convert ASCII boxes into more visually appealing extended UTF-8 boxes.
 
-For example, given this input:
-
-```plain
-  +---------+    +---+
-  |         |    |   | <- smallest
-  |  some   |    +---+
-  |   text  |
-  |         | <- standard
-  +---------+
-
-        +--------------+
-        |              |
-  +-----+----+         |
-  |     |    |         |
-  |     +----+---------+
-  |          | <- overlapping
-  +----------+
-```
-
-generate this output:
-
-```plain
-  ┌─────────┐    ┌───┐
-  │         │    │   │ <- smallest
-  │  some   │    └───┘
-  │   text  │
-  │         │ <- standard
-  └─────────┘
-
-        ┌──────────────┐
-        │              │
-  ┌─────┼────┐         │
-  │     │    │         │
-  │     └────┼─────────┘
-  │          │ <- overlapping
-  └──────────┘
-```
+![demo](./assets/demo.gif)
 
 ## Installation
 
